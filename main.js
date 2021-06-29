@@ -38,39 +38,106 @@ function uploadcar2() {
 
 window.addEventListener("keydown", my_keydown);
 function my_keydown(e) {
+    
     keyPressed = e.keyCode;
     console.log(keyPressed);
-    if (keyPressed == '38') {
-        car1_up(); console.log("up");
-    }
-    if (keyPressed == '40') {
-        car1_down();
-        console.log("down");
-    }
-    if (keyPressed == '37') {
-        car1_left();
-        console.log("left");
-    }
-    if (keyPressed == '39') {
-        car1_right();
-        console.log("right");
-    }
-      
-      keyPressed = e.keyCode;
-    console.log(keyPressed);
     if (keyPressed == '87') {
-        car2_up(); console.log("up");
+        car1_up();
+        console.log("w");
     }
     if (keyPressed == '83') {
-        car2_down();
-        console.log("down");
+        car1_down();
+        console.log("s");
     }
     if (keyPressed == '65') {
-        car2_left();
-        console.log("left");
+        car1_left();
+        console.log("a");
     }
     if (keyPressed == '68') {
+        car1_right();
+        console.log("d");
+    }
+      
+    if (keyPressed == '73') {
+        car2_up();
+        console.log("i");
+    }
+    if (keyPressed == '75') {
+        car2_down();
+        console.log("k");
+    }
+    if (keyPressed == '74') {
+        car2_left();
+        console.log("j");
+    }
+    if (keyPressed == '76') {
         car2_right();
-        console.log("right");
+        console.log("l");
+    }
+}
+
+function car1_up() {
+    if (car1_y >= 0) {
+        car1_y = car1_y - 10;
+        uploadBackground();
+        uploadcar1();
+        uploadcar2();
+    }
+}
+function car1_down() {
+    if (car1_y <= 500) {
+        car1_y = car1_y + 10;
+        uploadBackground();
+        uploadcar1();
+        uploadcar2();
+    }
+}
+function car1_left() {
+    if (car1_x >= 0) {
+        car1_x = car1_x - 10;
+        uploadBackground();
+        uploadcar1();
+        uploadcar2();
+    }
+}
+function car1_right() {
+    if (car1_x <= 700) {
+        car1_x = car1_x + 10;
+        uploadBackground();
+        uploadcar1();
+        uploadcar2();
+    }
+}
+
+function car2_up() {
+    if (car2_y >= 0) {
+        car2_y = car2_y - 10;
+        uploadBackground();
+        uploadcar2();
+        uploadcar1();
+    }
+}
+function car2_down() {
+    if (car2_y <= 500) {
+        car2_y = car2_y + 10;
+        uploadBackground();
+        uploadcar2();
+        uploadcar1();
+    }
+}
+function car2_left() {
+    if (car2_x >= 0) {
+        car2_x = car2_x - 10;
+        uploadBackground();
+        uploadcar2();
+        uploadcar1();
+    }
+}
+function car2_right() {
+    if (car2_x <= 700) {
+        car2_x = car2_x + 10;
+        uploadBackground();
+        uploadcar2();
+        uploadcar1();
     }
 }
